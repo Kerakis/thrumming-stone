@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHypGeo } from './hooks/hypgeo-hook';
 import './index.css';
 let deckData = require('./assets/decklist.json');
-console.log(deckData);
 
 export default function App() {
   const [currentTurn, setCurrentTurn] = useState(0);
