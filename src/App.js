@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { useHypGeo } from './hooks/hypgeo-hook';
 import './index.css';
-let deckData = require('./assets/decklist.json');
 
 export default function App() {
+  const [deckData, setDeckData] = useState(require('./assets/decklist.json'));
   const [currentTurn, setCurrentTurn] = useState(0);
+
+  // Test data
+  let harrysTest = () => setDeckData(require('./assets/harry.json'));
+  let standardTest = () => setDeckData(require('./assets/standard.json'));
+  let tinyTest = () => setDeckData(require('./assets/tiny.json'));
+  let ratsTest = () => setDeckData(require('./assets/rats.json'));
+  let nehebTest = () => setDeckData(require('./assets/decklist.json'));
 
   // This is the initial size of the library
   let N =
@@ -327,6 +334,33 @@ export default function App() {
             </div>
           </div>
         </div>
+        <div className='m-auto flex flex-row bg-gray-700 container border-solid border border-gray-100 shadow-xl p-4 mt-4 justify-center'>
+          <button
+            className='mx-8 py-1 px-1.5 text-sm bg-gray-600 border border-solid border-gray-100'
+            onClick={harrysTest}>
+            Harry's Chulane Deck
+          </button>
+          <button
+            className='mx-8 py-1 px-1.5 text-sm bg-gray-600 border border-solid border-gray-100'
+            onClick={tinyTest}>
+            Tiny Leaders Test Deck
+          </button>
+          <button
+            className='mx-8 py-1 px-1.5 text-sm bg-gray-600 border border-solid border-gray-100'
+            onClick={standardTest}>
+            Standard Test Deck
+          </button>
+          <button
+            className='mx-8 py-1 px-1.5 text-sm bg-gray-600 border border-solid border-gray-100'
+            onClick={ratsTest}>
+            Rat Colony Test Deck
+          </button>
+          <button
+            className='mx-8 py-1 px-1.5 text-sm bg-gray-600 border border-solid border-gray-100'
+            onClick={nehebTest}>
+            Neheb Commander Deck
+          </button>
+        </div>
         {hasSingletonRuleBreakers && hasThrummingStone.length > 0 && (
           <div className='m-auto flex flex-col bg-gray-700 container border-solid border border-gray-100 shadow-xl p-4 mt-4'>
             {hasSingletonRuleBreakers && hasThrummingStone.length > 0 && (
@@ -334,38 +368,38 @@ export default function App() {
             )}
             {hasDragonsApproach && hasThrummingStone.length > 0 && (
               <div>
-                Your odds of rippling into another Dragon's Approach are{' '}
-                {dragonsApproachOdds}%
+                You have a {dragonsApproachOdds}% chance of rippling into
+                another Dragon's Approach with Thrumming Stone out.
               </div>
             )}
             {hasPersistentPetitioners && hasThrummingStone.length > 0 && (
               <div>
-                Your odds of rippling into another Persistent Petitioners are{' '}
-                {persistentPetitionersOdds}%
+                You have a {persistentPetitionersOdds}% chance of rippling into
+                another Persistent Petitioners with Thrumming Stone out.
               </div>
             )}
             {hasRatColony && hasThrummingStone.length > 0 && (
               <div>
-                Your odds of rippling into another Rat Colony are{' '}
-                {ratColonyOdds}%
+                You have a {ratColonyOdds}% chance of rippling into another Rat
+                Colony with Thrumming Stone out.
               </div>
             )}
             {hasRelentlessRats && hasThrummingStone.length > 0 && (
               <div>
-                Your odds of rippling into another Relentless Rats are{' '}
-                {relentlessRatsOdds}%
+                You have a {relentlessRatsOdds}% chance of rippling into another
+                Relentless Rats with Thrumming Stone out.
               </div>
             )}
             {hasSevenDwarves && hasThrummingStone.length > 0 && (
               <div>
-                Your odds of rippling into another Seven Dwarves are{' '}
-                {sevenDwarvesOdds}%
+                You have a {sevenDwarvesOdds}% chance of rippling into another
+                Seven Dwarves with Thrumming Stone out.
               </div>
             )}
             {hasShadowbornApostles && hasThrummingStone.length > 0 && (
               <div>
-                Your odds of rippling into another Shadowborn Apostle are{' '}
-                {shadowbornApostleOdds}%
+                You have a {shadowbornApostleOdds}% chance of rippling into
+                another Shadowborn Apostles with Thrumming Stone out.
               </div>
             )}
           </div>
