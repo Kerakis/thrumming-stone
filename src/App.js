@@ -1,15 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHypGeo } from './hooks/hypgeo-hook';
-import { useDeckFetch } from './hooks/deck-fetch-hook';
+// import { useDeckFetch } from './hooks/deck-fetch-hook';
 import './index.css';
 
 export default function App() {
   const [deckData, setDeckData] = useState(require('./assets/decklist.json'));
 
   // Import public deck
-  const BASE_URL = `decks/all/aoGJfXD-Fka81kX8AJN6kA`;
-  const { data, loading, error } = useDeckFetch(BASE_URL);
+  // https://api2.moxfield.com/v2/decks/all/aoGJfXD-Fka81kX8AJN6kA
+  // const BASE_URL = `https://api2.moxfield.com/v2/decks/all/aoGJfXD-Fka81kX8AJN6kA`;
+  // const { data, loading, error } = useDeckFetch(BASE_URL);
   const [currentTurn, setCurrentTurn] = useState(0);
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch('decks/all/aoGJfXD-Fka81kX8AJN6kA')
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setItems(result);
+          console.log(result);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+  }, []);
 
   // Test data
   let harrysTest = () => setDeckData(require('./assets/harry.json'));
@@ -366,14 +389,14 @@ export default function App() {
             Neheb Commander Deck
           </button>
         </div>
-        <div className='App'>
+        {/* <div className='App'>
           <h1>Custom React Hook (Fetching Deck)</h1>
           {loading && <h1>Loading...</h1>}
           {error && <h3>Error: Something went wrong</h3>}
           <div>
             <pre>{JSON.stringify(data, undefined, 2)}</pre>
           </div>
-        </div>
+        </div> */}
         {hasSingletonRuleBreakers && hasThrummingStone.length > 0 && (
           <div className='m-auto flex flex-col bg-gray-700 container border-solid border border-gray-100 shadow-xl p-4 mt-4'>
             {hasSingletonRuleBreakers && hasThrummingStone.length > 0 && (
