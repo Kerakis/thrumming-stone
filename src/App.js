@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { useHypGeo } from './hooks/hypgeo-hook';
+import { useDeckFetch } from './hooks/deck-fetch-hook';
 import './index.css';
 
 export default function App() {
   const [deckData, setDeckData] = useState(require('./assets/decklist.json'));
+
+  // Import public deck
+  const BASE_URL = `decks/all/aoGJfXD-Fka81kX8AJN6kA`;
+  const { data, loading, error } = useDeckFetch(BASE_URL);
   const [currentTurn, setCurrentTurn] = useState(0);
 
   // Test data
@@ -360,6 +365,14 @@ export default function App() {
             onClick={nehebTest}>
             Neheb Commander Deck
           </button>
+        </div>
+        <div className='App'>
+          <h1>Custom React Hook (Fetching Deck)</h1>
+          {loading && <h1>Loading...</h1>}
+          {error && <h3>Error: Something went wrong</h3>}
+          <div>
+            <pre>{JSON.stringify(data, undefined, 2)}</pre>
+          </div>
         </div>
         {hasSingletonRuleBreakers && hasThrummingStone.length > 0 && (
           <div className='m-auto flex flex-col bg-gray-700 container border-solid border border-gray-100 shadow-xl p-4 mt-4'>
