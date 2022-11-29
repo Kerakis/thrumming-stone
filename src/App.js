@@ -37,12 +37,16 @@ export default function App() {
     const publicID = userInput.current.value.split('/').pop();
 
     try {
-      const response = await fetch(`decks/all/${publicID}`, {
-        method: 'GET',
-        headers: {
-          Accept: 'application/json',
-        },
-      });
+      const response = await fetch(
+        `https://api2.moxfield.com/v2/decks/all/${publicID}`,
+        {
+          method: 'GET',
+          mode: 'cors',
+          headers: {
+            Accept: 'application/json',
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`${response.status}`);
