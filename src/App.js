@@ -64,6 +64,18 @@ export default function App() {
   };
 
   useEffect(() => {
+    const thrummingStone = [`Thrumming Stone`];
+
+    // These are all of the cards that ignore restrictions on the number of a specific card that can be played in a deck
+    const singletonRuleBreakers = [
+      `Dragon's Approach`,
+      `Persistent Petitioners`,
+      `Rat Colony`,
+      `Relentless Rats`,
+      `Seven Dwarves`,
+      `Shadowborn Apostle`,
+    ];
+
     if (deckData !== null) {
       setDeckName(deckData.name);
       setDeckAuthor(deckData.authors[0].userName);
@@ -207,7 +219,6 @@ export default function App() {
         singletonRuleBreakers.filter((b) => deckData.mainboard[b])
       );
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deckData]);
 
   const userInput = useRef(null);
@@ -267,18 +278,6 @@ export default function App() {
       setCurrentTurn(currentTurn - 1);
     }
   };
-
-  const thrummingStone = [`Thrumming Stone`];
-
-  // These are all of the cards that ignore restrictions on the number of a specific card that can be played in a deck
-  const singletonRuleBreakers = [
-    `Dragon's Approach`,
-    `Persistent Petitioners`,
-    `Rat Colony`,
-    `Relentless Rats`,
-    `Seven Dwarves`,
-    `Shadowborn Apostle`,
-  ];
 
   // This feels clunky
   const hasDragonsApproach =
