@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/thrumming-stone/static/css/main.41bbcafd.css",
-    "main.js": "/thrumming-stone/static/js/main.a94a6a30.js",
-    "index.html": "/thrumming-stone/index.html",
-    "main.41bbcafd.css.map": "/thrumming-stone/static/css/main.41bbcafd.css.map",
-    "main.a94a6a30.js.map": "/thrumming-stone/static/js/main.a94a6a30.js.map"
+    "main.css": "/*/static/css/main.41bbcafd.css",
+    "main.js": "/*/static/js/main.5e8bf16f.js",
+    "index.html": "/*/index.html",
+    "main.41bbcafd.css.map": "/*/static/css/main.41bbcafd.css.map",
+    "main.5e8bf16f.js.map": "/*/static/js/main.5e8bf16f.js.map"
   },
   "entrypoints": [
     "static/css/main.41bbcafd.css",
-    "static/js/main.a94a6a30.js"
+    "static/js/main.5e8bf16f.js"
   ]
 }
