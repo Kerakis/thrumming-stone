@@ -1,3 +1,3 @@
-# Hypergeometric Distribution Calculator
+# Thrumming Stone
 
-This hypergeometric distribution calculator can help you determine the probabilities of drawing a specific card or cards from a library of cards. For example, it can help you determine the likelihood of drawing 2 land cards in your opening hand of 7 cards from a 100-card library containing 40 land cards.
+This tool uses hypergeometric distribution to calculate probablities through turns for Magic: the Gathering. It is especially useful for decks running Thrumming Stone and one or more of the singleton rule breakers (such as Shadowborn Apostles). A valid, non-private Moxfield deck URL is required.
