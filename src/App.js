@@ -50,7 +50,6 @@ export default function App() {
       }
 
       const result = await response.json();
-      console.log(result);
 
       setDeckData(result);
     } catch (err) {
