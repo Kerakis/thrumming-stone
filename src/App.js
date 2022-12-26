@@ -316,7 +316,9 @@ export default function App() {
           </form>
           <div>
             {isLoading && (
-              <h1 className='text-center mt-4'>Fetching Deck...</h1>
+              <h1 className='text-center mt-4'>
+                Fetching Deck. This may take a moment.
+              </h1>
             )}
             {error && (
               <h1 className='text-center mt-4'>
