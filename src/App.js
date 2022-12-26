@@ -291,11 +291,13 @@ export default function App() {
   const hasShadowbornApostles =
     hasSingletonRuleBreakers.includes(`Shadowborn Apostle`);
 
+  const year = new Date().getFullYear();
+
   return (
     <div className='flex flex-col md:h-screen mt-8 md:mt-0 align-center justify-center'>
       <div className='flex flex-col max-w-4xl mx-auto container'>
         <div className='m-auto flex flex-col bg-gray-700 container border-solid border border-gray-100 shadow-xl p-4'>
-          <form onSubmit={handleSubmit}>
+          <form className='flex flex-col' onSubmit={handleSubmit}>
             <label htmlFor='deckSearch'>Deck URL:</label>
             <input
               className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full overflow-hidden'
@@ -309,7 +311,7 @@ export default function App() {
             />
             <button
               type='submit'
-              className='mx-8 mt-4 py-1 px-1.5 text-sm bg-gray-600 border border-solid border-gray-100'
+              className='mx-auto mt-4 py-1 px-1.5 text-sm bg-gray-600 border border-solid border-gray-100'
               disabled={disable}>
               Fetch Deck Data
             </button>
@@ -507,14 +509,14 @@ export default function App() {
           )}
         </div>
       )}
-      <footer className='mx-auto md:fixed md:right-0 md:bottom-0 m-1 mt-4 text-sm bottom-0'>
+      <footer className='flex-shrink-0 mt-8 text-sm text-center lg:fixed lg:m-1 lg:bottom-0 lg:right-1'>
         <p>
-          Made with <span className='font-sans'>&#10084;</span> by
+          Made with <span className='font-sans'>&#9749;</span> by
           <a
             href='https://github.com/Kerakis'
             target='_blank'
             rel='noopener noreferrer'>
-            &nbsp;Kerakis&nbsp;
+            &nbsp;Kerakis&nbsp;© {year}
           </a>
         </p>
       </footer>
