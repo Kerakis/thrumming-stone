@@ -1,3 +1,8 @@
-# Thrumming Stone
+# React + Vite
 
-This tool uses hypergeometric distribution to calculate probablities through turns for Magic: the Gathering. It is especially useful for decks running Thrumming Stone and one or more of the singleton rule breakers (such as Shadowborn Apostles). A valid, non-private Moxfield deck URL is required.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

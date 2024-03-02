@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useHypGeo } from './hooks/hypgeo-hook';
-import './index.css';
+import './App.css';
 
 export default function App() {
   const [deckData, setDeckData] = useState(null);
@@ -472,7 +472,7 @@ export default function App() {
               {hasDragonsApproach && hasThrummingStone.length > 0 && (
                 <div>
                   You have a {dragonsApproachOdds}% chance of rippling into
-                  another Dragon's Approach with Thrumming Stone out.
+                  another Dragon&apos;s Approach with Thrumming Stone out.
                 </div>
               )}
               {hasPersistentPetitioners && hasThrummingStone.length > 0 && (
