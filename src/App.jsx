@@ -300,7 +300,7 @@ export default function App() {
           <form className='flex flex-col' onSubmit={handleSubmit}>
             <label htmlFor='deckSearch'>Deck URL:</label>
             <input
-              className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full overflow-hidden'
+              className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full overflow-hidden'
               ref={userInput}
               type='search'
               id='deckSearch'
@@ -346,13 +346,13 @@ export default function App() {
               <div className='col-span-3'>
                 <label>Total number of creature cards in your library:</label>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {creatures}
               </div>
               <div className='col-span-3'>
                 <label>Total number of artifact cards in your library:</label>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {artifacts}
               </div>
               <div className='col-span-3'>
@@ -360,19 +360,19 @@ export default function App() {
                   Total number of enchantment cards in your library:
                 </label>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {enchantments}
               </div>
               <div className='col-span-3'>
                 <label>Total number of instant cards in your library:</label>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {instants}
               </div>
               <div className='col-span-3'>
                 <label>Total number of sorcery cards in your library:</label>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {sorceries}
               </div>
               <div className='col-span-3'>
@@ -380,19 +380,19 @@ export default function App() {
                   Total number of planeswalker cards in your library:
                 </label>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {planeswalkers}
               </div>
               <div className='col-span-3'>
                 <label>Total number of land cards in your library:</label>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {lands}
               </div>
               <div className='col-span-3'>
                 <label>Total number of cards in your library:</label>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {N}
               </div>
             </form>
@@ -411,7 +411,7 @@ export default function App() {
               <div className='col-span-3'>
                 <p>Chance to draw a creature by turn {currentTurn}:</p>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {creatureOdds}%
               </div>
             </div>
@@ -419,7 +419,7 @@ export default function App() {
               <div className='col-span-3'>
                 <p>Chance to draw an artifact by turn {currentTurn}:</p>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {artifactOdds}%
               </div>
             </div>
@@ -427,7 +427,7 @@ export default function App() {
               <div className='col-span-3'>
                 <p>Chance to draw an enchantment by turn {currentTurn}:</p>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {enchantmentOdds}%
               </div>
             </div>
@@ -435,7 +435,7 @@ export default function App() {
               <div className='col-span-3'>
                 <p>Chance to draw an instant by turn {currentTurn}:</p>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {instantOdds}%
               </div>
             </div>
@@ -443,7 +443,7 @@ export default function App() {
               <div className='col-span-3'>
                 <p>Chance to draw a sorcery by turn {currentTurn}:</p>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {sorceryOdds}%
               </div>
             </div>
@@ -451,7 +451,7 @@ export default function App() {
               <div className='col-span-3'>
                 <p>Chance to draw a planeswalker by turn {currentTurn}:</p>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {planeswalkerOdds}%
               </div>
             </div>
@@ -459,7 +459,7 @@ export default function App() {
               <div className='col-span-3'>
                 <p>Chance to draw a land by turn {currentTurn}:</p>
               </div>
-              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
+              <div className='justify-self-end self-center bg-gray-800 border border-solid rounded-sm border-gray-100 text-center md:text-left px-2 mx-2 my-1 md:my-0 w-full md:w-32 overflow-hidden'>
                 {landOdds}%
               </div>
             </div>
@@ -509,7 +509,7 @@ export default function App() {
           )}
         </div>
       )}
-      <footer className='flex-shrink-0 mt-8 text-sm text-center lg:fixed lg:m-1 lg:bottom-0 lg:right-1'>
+      <footer className='shrink-0 mt-8 text-sm text-center lg:fixed lg:m-1 lg:bottom-0 lg:right-1'>
         <p>
           Made with <span className='font-sans'>&#9749;</span> by
           <a
